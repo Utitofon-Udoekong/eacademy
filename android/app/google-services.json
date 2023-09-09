@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "177237496899",
+    "project_id": "eacademy-app",
+    "storage_bucket": "eacademy-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:177237496899:android:076e4ef074add6063db0f6",
+        "android_client_info": {
+          "package_name": "com.app.eacademy.kayzen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "177237496899-kig32jfps0pv3djmccd2fcilj9ukmbna.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLNLfXPh0-AJoU5tt5R1C6_0lV_RRVJwM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "177237496899-kig32jfps0pv3djmccd2fcilj9ukmbna.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
