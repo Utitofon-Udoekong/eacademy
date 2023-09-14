@@ -97,4 +97,4 @@ const Colors = {
 };
 
 // eslint-disable-next-line import/prefer-default-export
-export { Colors };
+export {Colors};
