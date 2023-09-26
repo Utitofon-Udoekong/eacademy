@@ -1,0 +1,63 @@
+{
+  "extends": [
+    "@react-native-community"
+  ],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/prop-types": 0,
+    "react/sort-comp": 0,
+    "no-underscore-dangle": 0,
+    "import/no-extraneous-dependencies": 0,
+    "import/imports-first": 0,
+    "import/newline-after-import": 0,
+    "import/no-cycle": 0,
+    "no-use-before-define": 0,
+    "no-console": 0,
+    "class-methods-use-this": 0
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "app-component",
+            "./src/component"
+          ],
+          [
+            "app-assets",
+            "./src/assets"
+          ],
+          [
+            "app-api",
+            "./src/api"
+          ],
+          [
+            "app-common",
+            "./src/common"
+          ],
+          [
+            "app-config",
+            "./src/config"
+          ]
+        ],
+        "extensions": [
+          ".ts",
+          ".js",
+          ".jsx",
+          ".json"
+        ]
+      },
+      "node": {
+        "paths": [
+          "./src"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}
