@@ -1,5 +1,5 @@
 before_all do
-  ENV['RN_DISPLAY_NAME']='eAcademy by Kazen'
+  ENV['RN_DISPLAY_NAME']='eAcademy by Kayzen'
   ENV['RN_PACKAGE_NAME']="com.app.eacademy.kayzen"
   ENV['RN_APP_IDENTIFIER']="com.app.eacademy.kayzen"
   ENV['RN_DEVELOPER_TEAM']="3D255JM5Q7"

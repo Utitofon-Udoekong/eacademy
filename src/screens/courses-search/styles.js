@@ -15,7 +15,7 @@ export default StyleSheet.create({
     paddingTop: Platform.OS === 'ios' ? getStatusBarHeight() + 20 : 10,
     // marginTop: 20,
     paddingHorizontal: 16,
-    backgroundColor: '#FBC815',
+    backgroundColor: '#0A2D61',
     height: Platform.OS === 'ios' ? 100 : 60,
   },
   header1: {

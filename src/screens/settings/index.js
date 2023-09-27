@@ -393,7 +393,7 @@ class Settings extends Component {
                 <TouchableOpacity
                   onPress={this.onUpload}
                   style={{
-                    backgroundColor: '#FBC815',
+                    backgroundColor: '#0A2D61',
                     width: 99,
                     height: 35,
                     borderRadius: 8,
@@ -486,7 +486,7 @@ class Settings extends Component {
                 </View>
                 <TouchableOpacity
                   style={{
-                    backgroundColor: '#FBC815',
+                    backgroundColor: '#0A2D61',
                     height: 50,
                     alignItems: 'center',
                     justifyContent: 'center',
@@ -570,7 +570,7 @@ class Settings extends Component {
                 </View>
                 <TouchableOpacity
                   style={{
-                    backgroundColor: '#FBC815',
+                    backgroundColor: '#0A2D61',
                     height: 50,
                     alignItems: 'center',
                     justifyContent: 'center',

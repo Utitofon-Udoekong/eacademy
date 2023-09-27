@@ -123,7 +123,7 @@ export default StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 10,
     borderRadius: 6,
-    backgroundColor: '#FBC815',
+    backgroundColor: '#0A2D61',
     justifyContent: 'center',
     alignItems: 'center',
     fontFamily: 'Poppins',

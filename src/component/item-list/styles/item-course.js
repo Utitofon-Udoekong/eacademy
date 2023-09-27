@@ -88,13 +88,13 @@ export default StyleSheet.create({
     width: 17,
     height: 17,
     resizeMode: 'contain',
-    tintColor: '#FBC815',
+    tintColor: '#0A2D61',
   },
   icon1: {
     width: 16,
     height: 16,
     resizeMode: 'contain',
-    tintColor: '#FBC815',
+    tintColor: '#0A2D61',
     marginLeft: 15,
   },
   viewContent: {

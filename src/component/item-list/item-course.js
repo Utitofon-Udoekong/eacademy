@@ -51,7 +51,7 @@ class ItemCourse extends PureComponent {
           {item.on_sale ? (
             <View
               style={{
-                backgroundColor: '#FBC815',
+                backgroundColor: '#0A2D61',
                 top: 20,
                 left: 20,
                 width: 49,
@@ -71,7 +71,7 @@ class ItemCourse extends PureComponent {
               top: 10,
               right: 15,
               backgroundColor: ids.includes(item.id)
-                ? '#FBC815'
+                ? '#0A2D61'
                 : 'rgba(0,0,0,0.2)',
               borderRadius: 6,
               height: 40,
@@ -143,7 +143,7 @@ class ItemCourse extends PureComponent {
             <View>
               {item.rating > 0 && (
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                  <IconI name="star" color="#FBC815" size={15} />
+                  <IconI name="star" color="#0A2D61" size={15} />
                   <Text style={styles.rate}>{item.rating}</Text>
                 </View>
               )}

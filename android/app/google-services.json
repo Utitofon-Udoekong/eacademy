@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "177237496899-sdqqcpra1gn1jedoskvts319cict1bhv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.eacademy.kayzen",
+            "certificate_hash": "c717afa0db3d7d01af0552d19c1b1875f407c576"
+          }
+        },
+        {
           "client_id": "177237496899-kig32jfps0pv3djmccd2fcilj9ukmbna.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "177237496899-kig32jfps0pv3djmccd2fcilj9ukmbna.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "177237496899-uveq1n9em1966c01tik4a7e3dq2pd7sq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.eacademy.kayzen"
+              }
             }
           ]
         }
