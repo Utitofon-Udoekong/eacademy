@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import {
   Alert,
   BackHandler,
@@ -10,16 +10,16 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { withTranslation } from 'react-i18next';
-import { Images } from 'app-assets';
-import { connect } from 'react-redux';
+import {withTranslation} from 'react-i18next';
+import {Images} from 'app-assets';
+import {connect} from 'react-redux';
 import Icon from 'react-native-vector-icons/Ionicons';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { Client, setToken } from 'app-api';
-import { ValidateEmail, registerFCMToken, deleteFCMToken } from 'app-common';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {Client, setToken} from 'app-api';
+import {ValidateEmail, registerFCMToken, deleteFCMToken} from 'app-common';
 import styles from './styles';
-import { saveUserToken, setUser } from '../../actions/user';
-import { setLoading } from '../../actions/common';
+import {saveUserToken, setUser} from '../../actions/user';
+import {setLoading} from '../../actions/common';
 
 class Register extends PureComponent {
   constructor(props) {
@@ -39,7 +39,7 @@ class Register extends PureComponent {
   componentDidMount() {
     this.backHandler = BackHandler.addEventListener(
       'hardwareBackPress',
-      this.handleBackPress
+      this.handleBackPress,
     );
   }
 
@@ -55,12 +55,12 @@ class Register extends PureComponent {
   };
 
   onBack = () => {
-    const { navigation } = this.props;
+    const {navigation} = this.props;
     navigation.goBack();
   };
 
   onValidate = () => {
-    const { isCheck } = this.state;
+    const {isCheck} = this.state;
     if (!isCheck) {
       return false;
     }
@@ -68,8 +68,8 @@ class Register extends PureComponent {
   };
 
   validate() {
-    const { t } = this.props;
-    const { email, username, password, confirmPassword, isCheck } = this.state;
+    const {t} = this.props;
+    const {email, username, password, confirmPassword, isCheck} = this.state;
     if (!username || username.length === 0) {
       Alert.alert('', t('registerScreen.usernameEmpty'));
       this.username.focus();
@@ -112,7 +112,7 @@ class Register extends PureComponent {
     if (!this.validate()) {
       return;
     }
-    const { dispatch, navigation } = this.props;
+    const {dispatch, navigation} = this.props;
 
     if (!this.onValidate) {
       return;
@@ -122,7 +122,7 @@ class Register extends PureComponent {
 
     dispatch(setLoading(true));
 
-    const { email, username, password, confirmPassword } = this.state;
+    const {email, username, password, confirmPassword} = this.state;
     const params = {
       email,
       username,
@@ -138,7 +138,7 @@ class Register extends PureComponent {
 
       navigation.reset({
         index: 0,
-        routes: [{ name: 'HomeTabScreen' }],
+        routes: [{name: 'HomeTabScreen'}],
       });
 
       // Delete FCM Token.
@@ -154,20 +154,18 @@ class Register extends PureComponent {
   };
 
   render() {
-    const { t } = this.props;
-    const { isCheck, email, username, password, confirmPassword } = this.state;
+    const {t} = this.props;
+    const {isCheck, email, username, password, confirmPassword} = this.state;
 
     return (
       <KeyboardAwareScrollView
         contentContainerStyle={styles.container}
-        keyboardShouldPersistTaps="always"
-      >
+        keyboardShouldPersistTaps="always">
         <Image source={Images.iconBannerLogin2} style={styles.imgBanner} />
-        <View style={{ marginTop: 80 }}>
+        <View style={{marginTop: 80}}>
           <TouchableOpacity
-            style={{ marginLeft: 16, width: 50 }}
-            onPress={this.onBack}
-          >
+            style={{marginLeft: 16, width: 50}}
+            onPress={this.onBack}>
             <Image source={Images.iconBack} style={styles.iconBack} />
           </TouchableOpacity>
           <View style={styles.viewLogo}>
@@ -178,19 +176,17 @@ class Register extends PureComponent {
         <ScrollView
           showsVerticalScrollIndicator={false}
           bounces={false}
-          keyboardShouldPersistTaps="handled"
-        >
-          <View style={{ paddingHorizontal: 46, marginTop: 35 }}>
+          keyboardShouldPersistTaps="handled">
+          <View style={{paddingHorizontal: 46, marginTop: 35}}>
             <View
               style={[
                 styles.viewInput,
                 username.length > 0
-                  ? { borderWidth: 2, borderColor: '#000' }
+                  ? {borderWidth: 2, borderColor: '#000'}
                   : {},
-              ]}
-            >
+              ]}>
               <TextInput
-                ref={(ref) => {
+                ref={ref => {
                   this.username = ref;
                 }}
                 placeholder={t('registerScreen.usernamePlaceholder')}
@@ -198,7 +194,7 @@ class Register extends PureComponent {
                 style={styles.textInput}
                 autoCapitalize="none"
                 autoCorrect={false}
-                onChangeText={(value) => this.setState({ username: value })}
+                onChangeText={value => this.setState({username: value})}
               />
               {username.length > 0 && (
                 <Image source={Images.icEnterUsername} style={styles.icEnter} />
@@ -207,11 +203,10 @@ class Register extends PureComponent {
             <View
               style={[
                 styles.viewInput,
-                email.length > 0 ? { borderWidth: 2, borderColor: '#000' } : {},
-              ]}
-            >
+                email.length > 0 ? {borderWidth: 2, borderColor: '#000'} : {},
+              ]}>
               <TextInput
-                ref={(ref) => {
+                ref={ref => {
                   this.email = ref;
                 }}
                 autoCapitalize="none"
@@ -219,7 +214,7 @@ class Register extends PureComponent {
                 placeholder={t('registerScreen.emailPlaceholder')}
                 placeholderTextColor="#9E9E9E"
                 style={styles.textInput}
-                onChangeText={(value) => this.setState({ email: value })}
+                onChangeText={value => this.setState({email: value})}
               />
               {email.length > 0 && (
                 <Image source={Images.icEnterEmail} style={styles.icEnter} />
@@ -229,12 +224,11 @@ class Register extends PureComponent {
               style={[
                 styles.viewInput,
                 password.length > 0
-                  ? { borderWidth: 2, borderColor: '#000' }
+                  ? {borderWidth: 2, borderColor: '#000'}
                   : {},
-              ]}
-            >
+              ]}>
               <TextInput
-                ref={(ref) => {
+                ref={ref => {
                   this.password = ref;
                 }}
                 secureTextEntry={!this.state.showPassword}
@@ -242,14 +236,13 @@ class Register extends PureComponent {
                 placeholderTextColor="#9E9E9E"
                 style={styles.textInput}
                 value={password}
-                onChangeText={(value) => this.setState({ password: value })}
+                onChangeText={value => this.setState({password: value})}
               />
               {password.length > 0 && (
                 <TouchableOpacity
                   onPress={() =>
-                    this.setState({ showPassword: !this.state.showPassword })
-                  }
-                >
+                    this.setState({showPassword: !this.state.showPassword})
+                  }>
                   <Image
                     source={Images.icEnterPassword}
                     style={styles.icEnter}
@@ -261,12 +254,11 @@ class Register extends PureComponent {
               style={[
                 styles.viewInput,
                 confirmPassword.length > 0
-                  ? { borderWidth: 2, borderColor: '#000' }
+                  ? {borderWidth: 2, borderColor: '#000'}
                   : {},
-              ]}
-            >
+              ]}>
               <TextInput
-                ref={(ref) => {
+                ref={ref => {
                   this.confirmpassword = ref;
                 }}
                 placeholder={t('registerScreen.confirmPasswordPlaceholder')}
@@ -274,9 +266,7 @@ class Register extends PureComponent {
                 style={styles.textInput}
                 secureTextEntry={!this.state.showConfirmPassword}
                 value={confirmPassword}
-                onChangeText={(value) =>
-                  this.setState({ confirmPassword: value })
-                }
+                onChangeText={value => this.setState({confirmPassword: value})}
               />
               {confirmPassword.length > 0 && (
                 <TouchableOpacity
@@ -284,8 +274,7 @@ class Register extends PureComponent {
                     this.setState({
                       showConfirmPassword: !this.state.showConfirmPassword,
                     })
-                  }
-                >
+                  }>
                   <Image
                     source={Images.icEnterPassword}
                     style={styles.icEnter}
@@ -293,10 +282,9 @@ class Register extends PureComponent {
                 </TouchableOpacity>
               )}
             </View>
-            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+            <View style={{flexDirection: 'row', alignItems: 'center'}}>
               <TouchableOpacity
-                onPress={() => this.setState({ isCheck: !isCheck })}
-              >
+                onPress={() => this.setState({isCheck: !isCheck})}>
                 <Icon
                   name={!isCheck ? 'stop-outline' : 'ios-checkbox-outline'}
                   style={styles.iconCheck}
@@ -317,12 +305,12 @@ class Register extends PureComponent {
     );
   }
 }
-const mapStateToProps = ({ network }) => ({
+const mapStateToProps = ({network}) => ({
   network,
 });
-const mapDispatchToProps = (dispatch) => ({ dispatch });
+const mapDispatchToProps = dispatch => ({dispatch});
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(withTranslation()(Register));

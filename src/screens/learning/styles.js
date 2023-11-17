@@ -57,6 +57,12 @@ export default StyleSheet.create({
     height: 18,
     width: 18,
     resizeMode: 'contain',
+    tintColor: '#fff',
+  },
+  iconBack2: {
+    height: 18,
+    width: 18,
+    resizeMode: 'contain',
     tintColor: '#000',
   },
   icon: {

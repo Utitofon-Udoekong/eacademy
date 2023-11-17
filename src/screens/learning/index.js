@@ -707,7 +707,7 @@ class Learning extends Component {
             <TouchableOpacity
               onPress={this.goBack}
               hitSlop={{top: 8, bottom: 8, left: 8, right: 8}}>
-              <Image source={Images.iconClose} style={styles.iconBack} />
+              <Image source={Images.iconClose} style={styles.iconBack2} />
             </TouchableOpacity>
           </View>
         </View>

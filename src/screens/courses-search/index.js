@@ -98,7 +98,7 @@ class CoursesSearch extends Component {
               onPress={this.goBack}
               hitSlop={{ top: 10, left: 10, bottom: 10, right: 10 }}
             >
-              <Icon name="close" color="#000" size={30} />
+              <Icon name="close" color="#fff" size={30} />
             </TouchableOpacity>
             <View style={styles.viewInput}>
               <Image source={Images.iconSearch} style={styles.iconSearch} />
