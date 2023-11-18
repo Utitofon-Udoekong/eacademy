@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import {
   Alert,
   BackHandler,
@@ -11,13 +11,13 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import { withTranslation } from 'react-i18next';
-import { Images } from 'app-assets';
-import { COPYRIGHTS } from 'app-config';
-import { Client } from 'app-api';
-import { connect } from 'react-redux';
-import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { ValidateEmail } from 'app-common';
+import {withTranslation} from 'react-i18next';
+import {Images} from 'app-assets';
+import {COPYRIGHTS} from 'app-config';
+import {Client} from 'app-api';
+import {connect} from 'react-redux';
+import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import {ValidateEmail} from 'app-common';
 import styles from './styles';
 
 class Forgot extends PureComponent {
@@ -34,15 +34,15 @@ class Forgot extends PureComponent {
   componentDidMount() {
     this.backHandler = BackHandler.addEventListener(
       'hardwareBackPress',
-      this.handleBackPress
+      this.handleBackPress,
     );
     this.keyboardDidShowListener = Keyboard.addListener(
       'keyboardDidShow',
-      this._keyboardDidShow
+      this._keyboardDidShow,
     );
     this.keyboardDidHideListener = Keyboard.addListener(
       'keyboardDidHide',
-      this._keyboardDidHide
+      this._keyboardDidHide,
     );
   }
 
@@ -72,18 +72,18 @@ class Forgot extends PureComponent {
   };
 
   onBack = () => {
-    const { navigation } = this.props;
+    const {navigation} = this.props;
     navigation.goBack();
   };
 
   onSend = async () => {
-    const { email } = this.state;
+    const {email} = this.state;
     if (!ValidateEmail(email)) {
       Alert.alert('Please enter a valid email address');
       return;
     }
     try {
-      const response = await Client.resetEmail({ user_login: email });
+      const response = await Client.resetEmail({user_login: email});
       if (response.code === 'success') {
         Alert.alert(response.message);
       } else {
@@ -95,24 +95,21 @@ class Forgot extends PureComponent {
   };
 
   render() {
-    const { t } = this.props;
-    const { hidenBottom, email } = this.state;
+    const {t} = this.props;
+    const {hidenBottom, email} = this.state;
     return (
       <KeyboardAwareScrollView
         contentContainerStyle={styles.container}
-        keyboardShouldPersistTaps="always"
-      >
+        keyboardShouldPersistTaps="always">
         <Image source={Images.iconBannerLogin3} style={styles.imgBanner} />
         <ScrollView
           showsVerticalScrollIndicator={false}
           bounces={false}
-          keyboardShouldPersistTaps="handled"
-        >
-          <View style={{ marginTop: 80 }}>
+          keyboardShouldPersistTaps="handled">
+          <View style={{marginTop: 80}}>
             <TouchableOpacity
-              style={{ marginLeft: 16, width: 50 }}
-              onPress={this.onBack}
-            >
+              style={{marginLeft: 16, width: 50}}
+              onPress={this.onBack}>
               <Image source={Images.iconBack} style={styles.iconBack} />
             </TouchableOpacity>
             <View style={styles.viewLogo}>
@@ -122,7 +119,7 @@ class Forgot extends PureComponent {
             </View>
           </View>
 
-          <View style={{ paddingHorizontal: 46, marginTop: 35 }}>
+          <View style={{paddingHorizontal: 46, marginTop: 35}}>
             <TextInput
               placeholder={t('forgot.emailPlaceholder')}
               placeholderTextColor="#9E9E9E"
@@ -130,7 +127,7 @@ class Forgot extends PureComponent {
               autoCorrect={false}
               autoCapitalize="none"
               value={email}
-              onChangeText={(value) => this.setState({ email: value })}
+              onChangeText={value => this.setState({email: value})}
             />
             <TouchableOpacity style={styles.btnSubmit} onPress={this.onSend}>
               <Text style={styles.txtSubmit}>{t('forgot.btnSubmit')}</Text>
@@ -146,12 +143,12 @@ class Forgot extends PureComponent {
     );
   }
 }
-const mapStateToProps = ({ network }) => ({
+const mapStateToProps = ({network}) => ({
   network,
 });
-const mapDispatchToProps = (dispatch) => ({ dispatch });
+const mapDispatchToProps = dispatch => ({dispatch});
 
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(withTranslation()(Forgot));

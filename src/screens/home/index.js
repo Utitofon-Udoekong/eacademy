@@ -176,31 +176,6 @@ class Home extends PureComponent {
             )}
           </View>
 
-          {user?.token && (
-            <View
-              style={{
-                paddingHorizontal: 16,
-                marginTop: 16,
-              }}>
-              <TouchableOpacity
-                onPress={() => navigation.navigate('ProfileStackScreen')}
-                style={{flexDirection: 'row'}}>
-                <Image
-                  style={styles.avatar}
-                  source={{
-                    uri:
-                      user?.info?.avatar_url ||
-                      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMjCj43UJiVu-3Qp9b5yj-SwLGR-kndCzqLaiMv5SMkITd4CcbQQ7vX_CEZd-xxqka8ZM&usqp=CAU',
-                  }}
-                />
-                <View style={{marginLeft: 15}}>
-                  <Text style={styles.fullname}>{user?.info?.name}</Text>
-                  <Text style={styles.email}>{user?.info?.email}</Text>
-                </View>
-              </TouchableOpacity>
-            </View>
-          )}
-
           {user?.token && dataOverview?.id && (
             <View style={styles.overview}>
               <Text style={styles.overTitle}>{t('home.overview.title')}</Text>
@@ -378,23 +353,6 @@ class Home extends PureComponent {
             </View>
           )}
 
-          {dataInstructor && dataInstructor.length > 0 && (
-            <View style={styles.viewList}>
-              <Text style={[styles.titleList, {marginBottom: 8}]}>
-                {t('instructor')}
-              </Text>
-
-              <Instructor
-                navigation={navigation}
-                contentContainerStyle={{
-                  paddingHorizontal: 16,
-                  paddingVertical: 16,
-                }}
-                data={dataInstructor}
-                horizontal
-              />
-            </View>
-          )}
           {loading4 && (
             <View style={styles.viewList}>
               <Text style={[styles.titleList, {marginBottom: 8}]}>

@@ -35,7 +35,7 @@ export function ConvertToHour(timeUTC, timezone = '+07:00') {
   return moment(timeUTC, format).utcOffset(timezone).format('hh:mm a');
 }
 
-export const formatDateNow = time => {
+export const formatDateNow = (time) => {
   if (moment(time).format('Y') === moment().format('Y')) {
     if (moment(time).format('MMDD') === moment().format('MMDD')) {
       return moment(time).second(1).locale('vi').fromNow();
@@ -44,7 +44,7 @@ export const formatDateNow = time => {
   }
   return moment(time).format('DD [tháng] MM, Y');
 };
-export const secondsToHms = d => {
+export const secondsToHms = (d) => {
   const time = Number(d);
 
   const hour = new Date(time * 1000).getUTCHours();

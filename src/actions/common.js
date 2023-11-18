@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 /**
  * @flow
  * Various action creator for common use cases.
@@ -13,11 +14,11 @@ export function setAppOpen(isAppOpen: boolean = false) {
 }
 export function showLoading(
   loading: boolean = true,
-  isNative: boolean = false,
+  isNative: boolean = false
 ) {
   return {
     type: Types.SHOW_LOADING,
-    data: {loading, isNative},
+    data: { loading, isNative },
   };
 }
 export function setLoading(loading: boolean = true) {

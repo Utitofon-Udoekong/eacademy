@@ -43,7 +43,7 @@ class PopularCoursesHorizontal extends PureComponent {
         {item.on_sale ? (
           <View
             style={{
-              backgroundColor: '#FBC815',
+              backgroundColor: '#0A2D61',
               top: 10,
               left: 15,
               width: 49,
@@ -67,7 +67,7 @@ class PopularCoursesHorizontal extends PureComponent {
             {!wishlist.data.find((x) => x.id === item.id) ? (
               <IconI name="heart-outline" color="#fff" size={22} />
             ) : (
-              <IconI name="heart" color="#FBC815" size={22} />
+              <IconI name="heart" color="#0A2D61" size={22} />
             )}
           </TouchableOpacity>
           <View
@@ -139,7 +139,7 @@ class PopularCoursesHorizontal extends PureComponent {
             )}
             {item.rating > 0 && (
               <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                <IconI name="star" color="#FBC815" size={15} />
+                <IconI name="star" color="#0A2D61" size={15} />
                 <Text style={styles.rate}>{String(item.rating)}</Text>
               </View>
             )}

@@ -100,7 +100,7 @@ export default StyleSheet.create({
     fontFamily: 'Poppins',
     fontSize: 14,
     lineHeight: 21,
-    color: '#000',
+    color: '#fff',
   },
   viewSearch: {
     backgroundColor: '#fff',
@@ -209,7 +209,7 @@ export default StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: 16,
     lineHeight: 24,
-    color: '#000',
+    color: '#fff',
     fontWeight: '500',
   },
   viewInputBio: {

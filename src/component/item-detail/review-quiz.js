@@ -101,8 +101,8 @@ class ReviewQuiz extends Component {
         style={[
           styles.btnPage,
           {
-            backgroundColor: pageActive === index ? '#FBC815' : '#fff',
-            borderColor: pageActive === index ? '#FBC815' : '#E4E4E4',
+            backgroundColor: pageActive === index ? '#0A2D61' : '#fff',
+            borderColor: pageActive === index ? '#0A2D61' : '#E4E4E4',
           },
         ]}>
         <Text style={styles.txtPage}>{index + 1}</Text>

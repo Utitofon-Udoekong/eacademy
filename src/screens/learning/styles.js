@@ -57,6 +57,12 @@ export default StyleSheet.create({
     height: 18,
     width: 18,
     resizeMode: 'contain',
+    tintColor: '#fff',
+  },
+  iconBack2: {
+    height: 18,
+    width: 18,
+    resizeMode: 'contain',
     tintColor: '#000',
   },
   icon: {
@@ -165,7 +171,7 @@ export default StyleSheet.create({
     width: (333 / 375) * deviceWidth,
     height: deviceHeight,
     backgroundColor: '#fff',
-    borderColor: '#FBC815',
+    borderColor: '#0A2D61',
     borderRightWidth: 3,
   },
   viewHeaderModalMenu: {
@@ -177,7 +183,7 @@ export default StyleSheet.create({
     marginLeft: 16,
   },
   btnCloseMenu: {
-    backgroundColor: '#FBC815',
+    backgroundColor: '#0A2D61',
     width: 47,
     height: 39,
     justifyContent: 'center',
@@ -342,7 +348,7 @@ export default StyleSheet.create({
   btnSubmit: {
     height: 50,
     flex: 1,
-    backgroundColor: '#FBC815',
+    backgroundColor: '#0A2D61',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 8,
@@ -493,7 +499,7 @@ export default StyleSheet.create({
     width: 150,
     height: 50,
     borderRadius: 8,
-    backgroundColor: '#FBC815',
+    backgroundColor: '#0A2D61',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',

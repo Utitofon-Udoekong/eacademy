@@ -126,7 +126,7 @@ export default function Reviews({navigation, route}) {
             ratingCount={5}
             imageSize={13}
             readonly
-            ratingColor="#FBC815"
+            ratingColor="#0A2D61"
             startingValue={Number(item.rate)}
           />
         </View>

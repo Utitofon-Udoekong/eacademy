@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {
   Text,
@@ -356,7 +357,7 @@ class CoursesDetails extends Component {
                 ratingCount={5}
                 imageSize={12}
                 readonly
-                ratingColor="#FBC815"
+                ratingColor="#0A2D61"
                 startingValue={Number(item.rate)}
               />
             </View>
@@ -692,7 +693,9 @@ class CoursesDetails extends Component {
               hitSlop={{top: 10, bottom: 10, left: 10, right: 10}}>
               <Image source={Images.iconBack} style={styles.iconBack} />
             </TouchableOpacity>
-            <Text style={styles.title}>{t('singleCourse.title')}</Text>
+            <Text numberOfLines={1} style={styles.title}>
+              {data?.name}
+            </Text>
             <View style={styles.iconBack} />
           </View>
         </View>
@@ -720,7 +723,7 @@ class CoursesDetails extends Component {
                 position: 'absolute',
                 top: 16,
                 right: 16,
-                backgroundColor: isWishlist ? '#FBC815' : 'rgba(0,0,0,0.2)',
+                backgroundColor: isWishlist ? '#0A2D61' : 'rgba(0,0,0,0.2)',
                 borderRadius: 12,
                 height: 42,
                 width: 42,
@@ -900,7 +903,7 @@ class CoursesDetails extends Component {
                       ratingCount={5}
                       imageSize={15}
                       readonly
-                      ratingColor="#FBC815"
+                      ratingColor="#0A2D61"
                       startingValue={Number(review?.rated).toFixed(1)}
                     />
                     <Text style={[styles.txtOverview, {marginTop: 5}]}>
@@ -972,7 +975,7 @@ class CoursesDetails extends Component {
                       imageSize={20}
                       jumpValue={1}
                       startingValue={5}
-                      ratingColor="#FBC815"
+                      ratingColor="#0A2D61"
                       onFinishRating={value =>
                         this.setState({starRating: value})
                       }

@@ -133,7 +133,7 @@ class Profile extends Component {
                 )}
                 {user?.info?.email && (
                   <View style={{flexDirection: 'row', alignItems: 'center'}}>
-                    <IconF name="mail" size={18} color="#F8C719" />
+                    <IconF name="mail" size={18} color="#0A2D61" />
                     <Text style={styles.txtPhone}>{user?.info?.email}</Text>
                   </View>
                 )}
@@ -174,7 +174,7 @@ class Profile extends Component {
                       width: 50,
                       height: 50,
                       borderRadius: 12,
-                      backgroundColor: '#F8C719',
+                      backgroundColor: '#0A2D61',
                       alignItems: 'center',
                       justifyContent: 'center',
                     }}>
@@ -265,8 +265,7 @@ class Profile extends Component {
             right: 0,
             color: '#666',
           }}>
-          Version: {DeviceInfo.getVersion()} - Build:{' '}
-          {DeviceInfo.getBuildNumber()}
+          Version: {DeviceInfo.getVersion()}
         </Text>
       </View>
     );

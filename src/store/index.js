@@ -1,5 +1,5 @@
-import {legacy_createStore as createStore, applyMiddleware} from 'redux';
-import {persistStore, persistCombineReducers} from 'redux-persist';
+import { legacy_createStore as createStore, applyMiddleware } from 'redux';
+import { persistStore, persistCombineReducers } from 'redux-persist';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import createSagaMiddleware from 'redux-saga';
 
@@ -23,5 +23,5 @@ export default function configStore() {
 
   const persistor = persistStore(store);
 
-  return {store, persistor};
+  return { store, persistor };
 }

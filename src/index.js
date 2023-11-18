@@ -113,4 +113,3 @@ const MyApp = () => {
 };
 
 export default codePush(MyApp);
-// C:\Program Files\Android\Android Studio1\jre

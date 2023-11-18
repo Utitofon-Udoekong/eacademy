@@ -97,7 +97,7 @@ export default StyleSheet.create({
     marginTop: 0,
     flex: 1,
     height: 50,
-    backgroundColor: '#FFC224',
+    backgroundColor: '#0A2D61',
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 4,
@@ -105,7 +105,7 @@ export default StyleSheet.create({
   txtSubmit: {
     fontFamily: 'Sniglet-Regular',
     fontSize: 18,
-    color: '#000',
+    color: '#fff',
     fontWeight: '400',
   },
   line: {

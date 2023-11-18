@@ -121,13 +121,13 @@ export default StyleSheet.create({
     width: 21,
     height: 21,
     resizeMode: 'contain',
-    tintColor: '#FBC815',
+    tintColor: '#0A2D61',
   },
   icon1: {
     width: 16,
     height: 16,
     resizeMode: 'contain',
-    tintColor: '#FBC815',
+    tintColor: '#0A2D61',
     marginLeft: 15,
   },
   txt3: {
@@ -266,7 +266,7 @@ export default StyleSheet.create({
     fontFamily: 'Poppins-Medium',
     fontSize: 36,
     lineHeight: 54,
-    color: '#FBC815',
+    color: '#0A2D61',
     fontWeight: '500',
     textAlign: 'center',
   },
@@ -298,7 +298,7 @@ export default StyleSheet.create({
     borderTopColor: '#f7f7f7',
   },
   btnBuy: {
-    backgroundColor: '#FBC815',
+    backgroundColor: '#0A2D61',
     marginRight: 10,
     flex: 1,
     paddingVertical: 16,
