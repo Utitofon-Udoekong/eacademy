@@ -44,7 +44,7 @@
     "react-native-draggable-flatlist": "^4.0.1",
     "react-native-fast-image": "^8.6.3",
     "react-native-gesture-handler": "2.12.0",
-    "react-native-iap": "12.10.5",
+    "react-native-iap": "^12.13.2",
     "react-native-image-crop-picker": "0.40.0",
     "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-modal": "13.0.1",

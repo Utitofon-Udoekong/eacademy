@@ -101,7 +101,7 @@ android {
         applicationId "com.app.eacademy.kayzen"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 9
+        versionCode 10
         //t here denotes a test version
         versionName "1.0.0"
         // react-native-iap: we only use the Google Play flavor
@@ -117,23 +117,11 @@ android {
         }
     }
     signingConfigs {
-        debug {
-            storeFile file('debug.keystore')
-            storePassword 'android'
-            keyAlias 'androiddebugkey'
-            keyPassword 'android'
-        }
         release {
-            storeFile file('release.keystore')
+            storeFile file('eacademyRelease.keystore')
             storePassword 'release'
-            keyAlias 'my-key-alias'
+            keyAlias 'eacademyAlias'
             keyPassword 'release'
-            // if (project.hasProperty('MYAPP_UPLOAD_STORE_FILE')) {
-            //     storeFile file(MYAPP_UPLOAD_STORE_FILE)
-            //     storePassword MYAPP_UPLOAD_STORE_PASSWORD
-            //     keyAlias MYAPP_UPLOAD_KEY_ALIAS
-            //     keyPassword MYAPP_UPLOAD_KEY_PASSWORD
-            // }
         }
     }
     buildTypes {
